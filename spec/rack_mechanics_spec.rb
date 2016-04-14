@@ -14,6 +14,6 @@ describe "App" do
       Time.new(2015,11,27,14,30)
     }
     get '/'
-    expect(last_response.body).to include("Afternoon")
+    expect(last_response.body).to include("Morning")
   end
 end
