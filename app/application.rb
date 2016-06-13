@@ -4,8 +4,7 @@ class Application
     resp = Rack::Response.new
 
     t = Time.now
-    
-    if t.hour > 12
+    if t.hour >= 12
       resp.write "Good Afternoon!"
     else
       resp.write "Good Morning!"
