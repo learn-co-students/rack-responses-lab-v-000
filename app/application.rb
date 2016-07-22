@@ -1,17 +1,13 @@
 class Application
-  require 'time'
 
   def call(env)
     resp = Rack::Response.new
-
-    t = Time.new(time_of_day)
-
-    if t.now.hour > 1200
-      resp.write "YGood Morning!"
-    else
+    t = Time.now
+    if t.hour >= 12
       resp.write "Good Afternoon!"
+    else
+      resp.write "Good Morning!"
     end
-
     resp.finish
   end
 
