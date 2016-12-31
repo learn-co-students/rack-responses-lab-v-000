@@ -5,9 +5,6 @@ class Application
   #greet user good morning if morning and good afternoon if afternoon
     def call(app)
       resp = Rack::Response.new
-      #binding.pry
-      #input = Time.now
-      #input = gets.strip
       time = Time.now
       if Time.now.hour <= 12
         resp.write "Good Morning"
