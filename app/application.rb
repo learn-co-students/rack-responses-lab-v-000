@@ -1,6 +1,6 @@
 class Application
 
-  def call(env)
+  def clock(env)
     resp = Rack::Response.new
     time = Time.now.hour
     if time >= 0 && time <= 11
