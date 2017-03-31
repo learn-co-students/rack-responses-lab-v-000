@@ -5,9 +5,9 @@ class Application
     time = Time.now
      hour = time.hour
     if(hour < 12)
-   resp.write("Good Morning!")
- elsif (hour >= 12)
-   resp.write("Good Afternoon!")
+      resp.write("Good Morning!")
+    elsif (hour >= 12)
+      resp.write("Good Afternoon!")
     end
       resp.finish
   end
