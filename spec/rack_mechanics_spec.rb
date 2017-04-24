@@ -1,5 +1,5 @@
 require_relative './spec_helper'
-
+require 'pry'
 describe "App" do
 
   it 'wishes user a good morning in the morning' do
