@@ -3,10 +3,10 @@ class Application
   def call(env)
     resp = Rack::Response.new
 
-    if Time.new.hour < 12
-      resp.write "Good Morning! #{Time.new.hour}"
+    if Time.now.hour < 12
+      resp.write "Good Morning! #{Time.now.hour}"
     else
-      resp.write "Good Afternoon! #{Time.new.hour}"
+      resp.write "Good Afternoon! #{Time.now.hour}"
     end
 
     resp.finish
