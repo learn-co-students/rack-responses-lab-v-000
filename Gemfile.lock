@@ -1,10 +1,23 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    activesupport (5.1.4)
+      concurrent-ruby (~> 1.0, >= 1.0.2)
+      i18n (~> 0.7)
+      minitest (~> 5.1)
+      tzinfo (~> 1.1)
+    concurrent-ruby (1.0.5)
     diff-lcs (1.2.5)
+    i18n (0.9.1)
+      concurrent-ruby (~> 1.0)
+    minitest (5.10.3)
     rack (1.6.4)
+    rack-request_time (0.0.2)
+      activesupport
+      rack
     rack-test (0.6.3)
       rack (>= 1.0)
+    rack-timestamp (1.1.0)
     rspec (3.3.0)
       rspec-core (~> 3.3.0)
       rspec-expectations (~> 3.3.0)
@@ -18,11 +31,19 @@ GEM
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.3.0)
     rspec-support (3.3.0)
+    thread_safe (0.3.6)
+    tzinfo (1.2.4)
+      thread_safe (~> 0.1)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
   rack
+  rack-request_time
   rack-test
+  rack-timestamp (~> 1.1)
   rspec
+
+BUNDLED WITH
+   1.16.1
