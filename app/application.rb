@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 class Application
 
   def call(env)
