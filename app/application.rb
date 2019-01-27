@@ -7,7 +7,7 @@ class Application
 
 
     if
-      current_time < 1200
+      current_time < Time.at(1200)
       resp.write "Good Morning!"
     else
       resp.write "Good Afternoon!"
