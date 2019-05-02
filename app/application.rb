@@ -7,7 +7,15 @@ class Application
 
     time = Kernel.rand(1..24)
 
-    resp.write time
+    #time = Time.now
+
+    if time > 12
+      resp.write "It is the Afternoon."
+    else
+      resp.write "It is the Morning."
+    end
+
+    #resp.write time
 
     resp.finish
   end
