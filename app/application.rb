@@ -1,25 +1,20 @@
+
+
 class Application
-
+  require 'rack'
+  
   def call(env)
-    resp = Rack::Response.new
-    resp.write "Hello, my name is "
-    resp.finish
-  end
-
-end
-
-
-require 'rack'
+    return [ 200, {'Content-Type' => 'text/html'}, time_appropriate_greeting]
+    end
  
-# Something that responds to call, that's what Rack demands
-class MyServer
-  def call(env)
-    return [ 200, {'Content-Type' => 'text/html'}, pretty_response ]
+  def time_appropriate_greeting
+    time = Time.now
+    if time.hour.to_i >= 12
+      ["<strong>Good Afternoon!</strong>"]
+      else 
+        ["<strong>Good Morning!</strong>"]
+      end
+    end
   end
  
-  def pretty_response
-    (Time.now.to_i % 2).zero? ?  ["<em>Hello</em>"] : ["<strong>Hello</strong>"]
-  end
-end
- 
-run MyServer.new
+#run Application.new
