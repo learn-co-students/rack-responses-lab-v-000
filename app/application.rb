@@ -5,7 +5,7 @@ class Application
 
     time = Time.now.hour
 
-    time < 12 ? greeting = "Good Morning!" : greeting = "Good Afternoon!"
+    time >= 12 ? greeting = "Good Afternoon!" : greeting = "Good Morning!"
 
     resp.write greeting
 
