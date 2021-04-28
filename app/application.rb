@@ -2,8 +2,12 @@ class Application
   def call(env)
     resp = Rack::Response.new
     time = Time.new
+    t = rand(time.hour)
+    
+    resp.write "#{t}\n"
 
-    if rand(time.hour) < 12
+    if t < 12
+
       resp.write "Good Morning!"
     else
       resp.write "Good Afternoon!"
@@ -16,4 +20,6 @@ end
 # If it's after noon, greet the user with "Good Afternoon!". 
 # Remember that getting the time may return results in 24 hour time! 
 # Anytime on or after 12 is the afternoon.
+
+
 
