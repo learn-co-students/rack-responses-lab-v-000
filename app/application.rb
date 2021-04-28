@@ -8,6 +8,7 @@ class Application
     else
       resp.write "Good Afternoon!"
     end
+    
     resp.finish
   end
 end
@@ -18,7 +19,3 @@ end
 # Anytime on or after 12 is the afternoon.
 
 
-
- # t = rand(time.hour)
-    
-    # resp.write "#{t}\n"
